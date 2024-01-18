@@ -58,6 +58,11 @@ app.post('/blogs',(req,res)=>{
     });
 });
 
+app.get('/blogs/create',(req,res) =>{
+    res.render('create',{title: 'Create Blog'});
+});
+
+
 app.get('/blogs/:id', (req,res) => {
     const id = req.params.id;
     console.log(id);
@@ -81,9 +86,6 @@ app.get('/about', (req,res) => {
     res.render('about',{title: 'About'})
 });
 
-app.get('/blogs/create',(req,res) =>{
-    res.render('create',{title: 'Create Blog'});
-});
 
 
 
